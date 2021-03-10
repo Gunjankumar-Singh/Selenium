@@ -52,10 +52,6 @@ public class Assignment3 {
 		// Click on Search Patient
 		driver.findElement(By.xpath("//*[@id=\"content\"]/h2[1]/a")).click();
 		Thread.sleep(1000);
-//		String actualDataHome = "Search Patient";
-//		String expectedDataHome = driver.findElement(By.xpath("//*[@id=\"content\"]/h2[1]/a")).getText();
-//		Thread.sleep(1000);
-//		Assert.assertEquals(actualDataHome, expectedDataHome);
 
 		// Select firstName
 		WebElement field = driver.findElement(By.id("search_type"));
@@ -106,7 +102,9 @@ public class Assignment3 {
 	}
 
 	@Test(priority = 3)
-	public void attribut() {
+	public void attribute() {
+
+		driver.get("https://accounts.google.com/signup");
 		WebElement firstName = driver.findElement(By.id("firstName"));
 		firstName.sendKeys("Dummy");
 		String attribute1 = firstName.getAttribute("name");
@@ -139,6 +137,7 @@ public class Assignment3 {
 
 	@Test(priority = 4)
 	public void verifyPinCode() {
+		driver.get("http://chennaiiq.com/chennai/pincode-by-name.php");
 		List<String> Pincode = new ArrayList<String>();
 
 		WebElement table = driver.findElement(By.xpath("/html/body/table/tbody/tr[3]/td[2]/table[1]/tbody"));

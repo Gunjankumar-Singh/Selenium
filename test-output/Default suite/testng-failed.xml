@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Selenium.WebTable">
+      <class name="Selenium.Assignment3">
         <methods>
-          <include name="beforeSuite"/>
           <include name="afterSuite"/>
-          <include name="WebTable"/>
+          <include name="verifyPinCode"/>
+          <include name="beforeSuite"/>
         </methods>
-      </class> <!-- Selenium.WebTable -->
+      </class> <!-- Selenium.Assignment3 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
